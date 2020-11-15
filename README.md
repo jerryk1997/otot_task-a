@@ -25,7 +25,7 @@ There are 2 websites available for testing, follow the instructions below to run
 2. Run the command `docker-compose build` to build the container followed by `docker-compose up -d` to run it.
 3. Repeat steps 1 and 2 for webservice2. Note the difference is only in step 1, where you replace `webservice1` with `webservice2`.
 4. Navigate back to the project root directory before running `cd proxy` to navigate to the reverse proxy directory
-5.Run the command `docker-compose build` to build the container for the reverse proxy followed by `docker-compose up -d` to run it.
+5. Run the command `docker-compose build` to build the container for the reverse proxy followed by `docker-compose up -d` to run it.
 6. You are now ready to access the website! To access website 1 type ` http://localhost/thisone` into the browser, 
 and to access website 2, type ` http://localhost/thatone` into the browser.
 7. To stop running all containers, type `docker stop [CONTAINER_NAME]` for each of the containers you created.
