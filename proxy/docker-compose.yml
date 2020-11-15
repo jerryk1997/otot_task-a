@@ -1,0 +1,18 @@
+version: '2'
+services:
+  proxy:
+    build: ./
+    networks:
+      - webservice1
+      - webservice2
+    ports:
+      - 80:80
+    container_name: proxy
+
+networks:
+  webservice1:
+    external:
+      name: webservice1_default
+  webservice2:
+    external:
+      name: webservice2_default
