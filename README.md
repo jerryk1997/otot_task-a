@@ -15,10 +15,17 @@ images (1 mark)
 
 # Running the Task A
 
-1. Clone this repository by using `git clone https://github.com/sheexiong/task-a.git`.
-2. Navigate to the project root directory by using `cd task-a`.
-3. Navigate to the website1 by using `cd website1` and run `docker-compose up --build -d` to build the image for website1 and run the docker container.
-4. Navigate to the website2 by using `cd ../website2` and run `docker-compose up --build -d` to build the image for website2 and run the docker container.
-5. Navigate to the reverse proxy server by using `cd ../reverseProxy` and run `docker-compose up --build -d` to build the image for reverse proxy server and run the docker container.
-6. Go to browser and enter http://localhost/website1 to access website1 and http://localhost/website2 to access website2. If you enter the directory other than these 2 (e.g. http://localhost/website3), it will show a 404 error page.
-7. Stop all running docker container by using `docker stop $(docker ps -q)` on Linux or Git Bash **OR** `docker ps -q | % { docker stop $_ }` on Windows PowerShell.
+Downloading and opening project folder:
+
+1. Clone this repository by using `git clone https://github.com/jerryk1997/otot_task-a.git`.
+2. Navigate to the assignment submission directory by typing in `cd otot_task-a` if in root directory containing this folder
+
+There are 2 websites available for testing, follow the instructions below to run them:
+1. Once in the project root directory, navigate to the first website directory by using input `cd webservice1`.
+2. Run the command `docker-compose build` to build the container followed by `docker-compose up -d` to run it.
+3. Repeat steps 1 and 2 for webservice2. Note the difference is only in step 1, where you replace `webservice1` with `webservice2`.
+4. Navigate back to the project root directory before running `cd proxy` to navigate to the reverse proxy directory
+5.Run the command `docker-compose build` to build the container for the reverse proxy followed by `docker-compose up -d` to run it.
+6. You are now ready to access the website! To access website 1 type ` http://localhost/thisone` into the browser, 
+and to access website 2, type ` http://localhost/thatone` into the browser.
+7. To stop running all containers, type `docker stop [CONTAINER_NAME]` for each of the containers you created.
